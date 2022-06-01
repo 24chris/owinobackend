@@ -23,22 +23,22 @@ class Category(models.Model):
 
     def get_slider_image(self):
         if self.slider_image:
-            return 'https://owinotest.herokuapp.com' + self.slider_image.url
+            return 'http://127.0.0.1:8000' + self.slider_image.url
         return''
     
     def get_slider_image2(self):
         if self.slider_image:
-            return 'https://owinotest.herokuapp.com' + self.slider_image2.url
+            return 'http://127.0.0.1:8000' + self.slider_image2.url
         return''
     
     def get_slider_image3(self):
         if self.slider_image:
-            return 'https://owinotest.herokuapp.com' + self.slider_image3.url
+            return 'http://127.0.0.1:8000' + self.slider_image3.url
         return''
     
     def get_slider_image4(self):
         if self.slider_image:
-            return 'https://owinotest.herokuapp.com' + self.slider_image4.url
+            return 'http://127.0.0.1:8000' + self.slider_image4.url
         return''
 
     def get_absolute_url(self):
@@ -66,18 +66,18 @@ class Product(models.Model):
     
     def get_image(self):
         if self.image:
-            return 'https://owinotest.herokuapp.com' + self.image.url
+            return 'http://127.0.0.1:8000' + self.image.url
         return''
     
     def get_thumbnail(self):
         if self.thumbnail:
-            return 'https://owinotest.herokuapp.com' + self.thumbnail.url
+            return 'http://127.0.0.1:8000' + self.thumbnail.url
         else:
             if self.image:
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                return 'https://owinotest.herokuapp.com' + self.thumbnail.url
+                return 'http://127.0.0.1:8000' + self.thumbnail.url
             else:
                 return ''
     
