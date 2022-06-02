@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['owinotest.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -50,7 +50,7 @@ CORS_ALLOWED_ORIGINS = [
     
     "http://localhost:8080",
     "https://owinotest.herokuapp.com",
-    
+    "https://owino-24chris.vercel.app"
     # "http://127.0.0.1:9000",
 ]
 
