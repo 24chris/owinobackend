@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'djoser',
     'product',
     'order',
+    'storages',
 ]
 CORS_ALLOWED_ORIGINS = [
     
@@ -146,6 +147,18 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR/'media/'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+# STATIC_URL = AWS_URL + '/static/'
+
+# MEDIA_URL = AWS_URL + '/media/'
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
