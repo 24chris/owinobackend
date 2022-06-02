@@ -42,7 +42,7 @@ class Category(models.Model):
         return''
 
     def get_absolute_url(self):
-        return f'/{self.slug}/'
+        return f'{self.slug}/'
 
 
 class Product(models.Model):
